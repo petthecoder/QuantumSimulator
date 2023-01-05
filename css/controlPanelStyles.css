@@ -1,0 +1,44 @@
+
+
+.left-control-panel {
+    position: fixed;
+    left: 0;
+    top: 60px;
+    width: 250px;
+    border-right: 1px solid black;
+    height: 100vh;
+    background: #333;
+}
+
+.bottom-control-panel {
+    position: fixed;
+    left: 250px;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid black;
+    height: 400px;
+    background: #444;
+}
+
+.button {
+    padding: 10px;
+    border: 1px solid #999;
+    cursor: pointer;
+}
+
+.dream-disposal {
+    width: 250px;
+    background: white;
+    opacity: 0.5;
+    height: 100vh;
+    display: none;
+    position: absolute;
+    font-size: 80px;
+}
+.dream-disposal i {
+    z-index: 10;
+    position: absolute;
+    color: black;
+    margin-top: calc(50vh - 80px);
+    margin-left: calc(50% - 40px);
+}

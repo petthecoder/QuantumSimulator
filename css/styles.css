@@ -1,0 +1,17 @@
+
+* {
+    box-sizing: border-box;
+    caret-color: transparent;
+    color: white;
+    font-family: 'Open Sans';
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background: #B01E4A;
+    height: 60px;
+    width: 100%;
+}
