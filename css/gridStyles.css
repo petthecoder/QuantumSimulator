@@ -3,12 +3,12 @@
     overflow-x: scroll;
     margin-left: 250px;
     padding-left: 20px;
-    height: calc(100vh - 460px);
+    height: calc(100vh - 360px);
 }
 
 .grid-row {
     height: 35px;
-    width: 3000px;
+    width: 3035px;
     margin-right: 25px;
     margin-bottom: 35px;
     border-bottom: 1px solid black;
@@ -19,6 +19,14 @@
   height: 60px;
   padding: 5px;
   display: inline-block;
+  margin-top: -20px;
+}
+
+.grid-row .fa-trash-can {
+    color: black;
+    cursor: pointer;
+    background: white;
+    padding-right: 10px
 }
 
 .cube {
@@ -26,6 +34,8 @@
     height: 40px;
     margin: 10px;
     cursor: pointer;
+    padding-left: 15px;
+    padding-top: 8px;
 }
 
 .red {
@@ -62,4 +72,40 @@
 
 .brown {
     background: brown;
+}
+
+.red::before {
+    content: "A";
+}
+
+.blue::before {
+    content: "B";
+}
+
+.green::before {
+    content: "C";
+}
+
+.yellow::before {
+    content: "D";
+}
+
+.orange::before {
+    content: "E";
+}
+
+.black::before {
+    content: "F";
+}
+
+.purple::before {
+    content: "G";
+}
+
+.lightblue::before {
+    content: "H";
+}
+
+.brown::before {
+    content: "I";
 }

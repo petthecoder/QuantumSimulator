@@ -1,5 +1,6 @@
 
-    const gridArray = [];
+
+    var rows = 0;
 
 
 function startGrid() {
@@ -15,11 +16,15 @@ function createRow() {
     const newRow = document.createElement("div");
     newRow.classList.add("grid-row");
 
+    addReturnBtn(newRow);
+
     var cellList = [];
+
+    rowNum = rows++;
 
     for(let i = 0; i < stepNum; i++) {
         const newCell = document.createElement("div");
-        newCell.id = "grid-cell-" + i;
+        newCell.id = "grid-cell-" + rowNum + "-" + i;
         newCell.classList.add("grid-cell");
         newRow.appendChild(newCell);
         cellList.push(newCell);
@@ -38,6 +43,22 @@ function createRow() {
 
     return newRow;
 }
+
+function addReturnBtn(elem) {
+    var returnBtn = document.createElement("i");
+    returnBtn.classList.add("fa-trash-can");
+    returnBtn.classList.add("fa-solid");
+
+    returnBtn.addEventListener("click", function(ev) {
+        deleteRow(elem);
+    });
+
+    elem.append(returnBtn);
+}
+
+function deleteRow(elem) {
+    elem.remove();
+}
   
 function drag(ev) {
     setTimeout(showDisposal, 50);
@@ -54,7 +75,7 @@ function drop(ev) {
     var type = data.split("-")[0];
     newDraggable(type);
 
-    if(ev.target.id === "dream-disposal") {
+    if(ev.target.id === "dream-disposal" || ev.target.id === "dream-disposal-can") {
         document.getElementById(data).remove();
     }
 

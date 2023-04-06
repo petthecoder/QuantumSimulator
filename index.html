@@ -8,7 +8,8 @@
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/gridStyles.css">
         <link rel="stylesheet" href="css/controlPanelStyles.css">
-        <script src="js/gridController.js"></script>
+        <script src="js/grid.js"></script>
+        <script src="js/simulationAdapter.js"></script>
         <script src="js/controlPanel.js"></script>
         <script src="js/main.js"></script>
     </head>
@@ -18,20 +19,22 @@
 
         <div id="left-control-panel" class="left-control-panel">
             <div id="dream-disposal" class="dream-disposal" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <i class="fa-solid fa-trash-can"></i>
+                <i id="dream-disposal-can" class="fa-solid fa-trash-can"></i>
             </div>
-            <div class="button" onclick="startGrid()">Add Quantum Bit</div>
-            <div class="button" onclick="startGrid()">Add Classic Bit</div>
-            <div id="green-creator"><div draggable="true" ondragstart="drag(event)" id="green-0" class="green cube"></div></div>
-            <div id="blue-creator"><div draggable="true" ondragstart="drag(event)" id="blue-0" class="blue cube"></div></div>
-            <div id="red-creator"><div draggable="true" ondragstart="drag(event)" id="red-0" class="red cube"></div></div>
-            <div id="yellow-creator"><div draggable="true" ondragstart="drag(event)" id="yellow-0" class="yellow cube"></div></div>
-            <div id="orange-creator"><div draggable="true" ondragstart="drag(event)" id="orange-0" class="orange cube"></div></div>
-            <div id="black-creator"><div draggable="true" ondragstart="drag(event)" id="black-0" class="black cube"></div></div>
-            <div id="purple-creator"><div draggable="true" ondragstart="drag(event)" id="purple-0" class="purple cube"></div></div>
-            <div id="lightblue-creator"><div draggable="true" ondragstart="drag(event)" id="lightblue-0" class="lightblue cube"></div></div>
-            <div id="brown-creator"><div draggable="true" ondragstart="drag(event)" id="brown-0" class="brown cube"></div></div>
+            <div class="button noselect" onclick="startGrid()">Add Quantum Bit</div>
+            <div class="button noselect" onclick="startGrid()">Add Classic Bit</div>
+            <div id="red-creator" class="creator"><div draggable="true" ondragstart="drag(event)" id="red-0" class="red cube"></div></div>
+            <div id="blue-creator" class="creator"><div draggable="true" ondragstart="drag(event)" id="blue-0" class="blue cube"></div></div>
+            <div id="green-creator" class="creator"><div draggable="true" ondragstart="drag(event)" id="green-0" class="green cube"></div></div>
+            <div id="yellow-creator" class="creator"><div draggable="true" ondragstart="drag(event)" id="yellow-0" class="yellow cube"></div></div>
+            <div id="orange-creator" class="creator"><div draggable="true" ondragstart="drag(event)" id="orange-0" class="orange cube"></div></div>
+            <div id="black-creator" class="creator"><div draggable="true" ondragstart="drag(event)" id="black-0" class="black cube"></div></div>
+            <div id="purple-creator" class="creator"><div draggable="true" ondragstart="drag(event)" id="purple-0" class="purple cube"></div></div>
+            <div id="lightblue-creator" class="creator"><div draggable="true" ondragstart="drag(event)" id="lightblue-0" class="lightblue cube"></div></div>
+            <div id="brown-creator" class="creator"><div draggable="true" ondragstart="drag(event)" id="brown-0" class="brown cube"></div></div>
         </div>
-        <div class="bottom-control-panel"></div>
+        <div class="bottom-control-panel">
+            <div class="button noselect" onclick="simulate()">Simulate</div>
+        </div>
     </body>
 </html>
